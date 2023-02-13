@@ -16,12 +16,12 @@ MouseProjects <- available_projects(organism = "mouse")
 #Se selecciona un proyecto de interés
 ProjectData <- subset(
   MouseProjects,
-  project == "SRP068801" & project_type == "data_sources"
+  project == "SRP118778" & project_type == "data_sources"
 )
 
 #Se crea el objeto RSEa con la información
-rse_gene_SRP068801 <- create_rse(ProjectData)
+rse_gene_SRP118778 <- create_rse(ProjectData)
 
 #Se convierten las cuentas crudas a cuentas por lectura
-assay(rse_gene_SRP068801, "counts") <- compute_read_counts(rse_gene_SRP068801)
+assay(rse_gene_SRP118778, "counts") <- compute_read_counts(rse_gene_SRP118778)
 
